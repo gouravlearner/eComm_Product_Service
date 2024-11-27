@@ -7,6 +7,8 @@ import dev.gourav.ecomm.productservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class ProductController {
 
@@ -33,5 +35,11 @@ public class ProductController {
             productRequestDto.getImage(),
             productRequestDto.getCategory()
     );
+
+}
+
+@GetMapping ("/products")
+public List<Product> getAllProducts(){
+        return null;
 }
 }
